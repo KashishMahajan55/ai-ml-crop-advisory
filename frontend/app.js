@@ -9,6 +9,7 @@
 
 // ── CONFIG ───────────────────────────────────────────────────────────────────
 // Empty string = same server (works locally AND on Render — no CORS ever)
+// After deploying backend to Render, replace "" with your Render URL
 const BACKEND_URL = "";
 
 const CROP_EMOJI = {
