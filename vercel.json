@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "crop-advisory-frontend",
+  "comment": "Vercel deployment config — serves the static frontend folder.",
+  "builds": [
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "frontend/$1"
+    }
+  ]
+}

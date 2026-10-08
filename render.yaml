@@ -1,0 +1,34 @@
+# render.yaml
+# Render deployment configuration for the FastAPI backend.
+# Synthetic dataset generated for educational AI/ML demonstration.
+#
+# How to deploy:
+#   1. Push this repo to GitHub
+#   2. Go to https://render.com → New → Web Service
+#   3. Connect your GitHub repo
+#   4. Render auto-detects this file and configures everything
+
+services:
+  - type: web
+    name: crop-advisory-api
+    runtime: python
+    region: oregon          # free tier region
+    plan: free
+
+    # Build: install deps, generate dataset, train models
+    buildCommand: >
+      pip install -r backend/requirements.txt &&
+      pip install scikit-learn numpy &&
+      python generate_dataset.py &&
+      python train_model.py
+
+    # Start the FastAPI server
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+
+    # Environment variables (no secrets needed for this project)
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+
+    # Health check endpoint
+    healthCheckPath: /

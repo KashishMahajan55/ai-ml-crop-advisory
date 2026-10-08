@@ -1,0 +1,17 @@
+[server]
+# Do not open browser automatically in headless/server environments
+headless = false
+# Disable file watcher in production-like use
+# runOnSave = false
+
+[browser]
+# Do not collect usage statistics
+gatherUsageStats = false
+
+[logger]
+# Only show warnings and errors — no debug output exposed to users
+level = "warning"
+
+[client]
+# Hide the top-right Streamlit menu and footer branding (optional)
+showErrorDetails = false

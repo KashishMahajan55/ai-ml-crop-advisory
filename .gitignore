@@ -1,0 +1,32 @@
+# AI/ML Crop Advisory System
+# Synthetic dataset generated for educational AI/ML demonstration.
+
+# trained model artefacts
+models/*.pkl
+
+# generated data and results (regenerate with generate_dataset.py)
+data/synthetic_crop_data.csv
+results/predictions.csv
+
+# NEVER commit secrets or environment files
+.env
+.env.*
+*.env
+secrets.toml
+.streamlit/secrets.toml
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# virtual environments
+venv/
+.venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
