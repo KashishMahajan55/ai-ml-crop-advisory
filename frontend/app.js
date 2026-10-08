@@ -8,9 +8,8 @@
  */
 
 // ── CONFIG ───────────────────────────────────────────────────────────────────
-// Empty string = same server (works locally AND on Render — no CORS ever)
-// After deploying backend to Render, replace "" with your Render URL
-const BACKEND_URL = "";
+// Render backend URL
+const BACKEND_URL = "https://crop-advisory-api-ocd5.onrender.com";
 
 const CROP_EMOJI = {
   Rice: "🌾", Wheat: "🌾", Maize: "🌽", Chickpea: "🫘",
