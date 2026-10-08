@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "crop-advisory-frontend",
-  "comment": "Vercel deployment config — serves the static frontend folder.",
   "builds": [
     {
       "src": "frontend/**",
